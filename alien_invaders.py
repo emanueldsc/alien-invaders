@@ -1,18 +1,21 @@
-import sys
 import pygame
+from settings import Settings
+from ship import Ship
+import game_functions as gf
 
 def run_game():
+	
 	# Start the game and add object to screen
 	pygame.init()
-	screen = pygame.display.set_mode((1200,800))
+	ia_settings = Settings()
+	screen = pygame.display.set_mode((ia_settings.screen_width, ia_settings.screen_heigth))
 	pygame.display.set_caption('Alien Invaders')
-	# Start princiap while
+	ship = Ship(screen)
+	
+	# Start principal while
 	while True:
 		# Liste principal keyboard events and mice
-		for event in pygame.event.get():
-			if event.type == pygame.QUIT:
-				sys.exit()
-			# Show last screen see
-			pygame.display.flip()
+		gf.check_events(ship)
+		gf.update_screen(ia_settings, screen, ship)
 
 run_game()
