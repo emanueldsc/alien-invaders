@@ -10,12 +10,13 @@ def run_game():
 	ia_settings = Settings()
 	screen = pygame.display.set_mode((ia_settings.screen_width, ia_settings.screen_heigth))
 	pygame.display.set_caption('Alien Invaders')
-	ship = Ship(screen)
+	ship = Ship(ia_settings, screen)
 	
 	# Start principal while
 	while True:
 		# Liste principal keyboard events and mice
 		gf.check_events(ship)
+		ship.update()
 		gf.update_screen(ia_settings, screen, ship)
 
 run_game()
