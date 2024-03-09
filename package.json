@@ -1,0 +1,12 @@
+{
+  "name": "alien-invaders",
+  "version": "1.0.0",
+  "description": "No jogo Alien-Invaders, o jogador esta abordo de uma espaçonave que aparece na parte inferior centrada na tela.",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon alien_invaders.py"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

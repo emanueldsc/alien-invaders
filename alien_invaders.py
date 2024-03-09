@@ -4,7 +4,6 @@ from ship import Ship
 import game_functions as gf
 
 def run_game():
-	
 	# Start the game and add object to screen
 	pygame.init()
 	ia_settings = Settings()
@@ -14,7 +13,7 @@ def run_game():
 	
 	# Start principal while
 	while True:
-		# Liste principal keyboard events and mice
+		# List principal keyboard events and mice
 		gf.check_events(ship)
 		ship.update()
 		gf.update_screen(ia_settings, screen, ship)
